@@ -1,0 +1,854 @@
+Graph: a
+Clock: 4.945799456e-270
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 50
++++++
+
+Graph: aa
+Clock: 4.945810287e-270
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 50
++++++
+
+Graph: aaa
+Clock: 4.945824729e-270
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 50
++++++
+
+Graph: b
+Clock: 0.01
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 80
++++++
+
+Graph: bb
+Clock: 4.945842781e-270
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 80
++++++
+
+Graph: bbb
+Clock: 0.01
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 80
++++++
+
+Graph: c
+Clock: 0.01
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 110
++++++
+
+Graph: cc
+Clock: 0.02
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 110
++++++
+
+Graph: ccc
+Clock: 0.01
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 110
++++++
+
+Graph: d
+Clock: 0.02
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 150
++++++
+
+Graph: dd
+Clock: 0.03
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 150
++++++
+
+Graph: ddd
+Clock: 0.03
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 150
++++++
+
+Graph: e
+Clock: 0.1
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 250
++++++
+
+Graph: ee
+Clock: 0.13
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 250
++++++
+
+Graph: eee
+Clock: 0.16
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 250
++++++
+
+Graph: f
+Clock: 0.6
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 450
++++++
+
+Graph: ff
+Clock: 0.73
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 450
++++++
+
+Graph: fff
+Clock: 0.99
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 450
++++++
+
+Graph: g
+Clock: 1.4
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 600
++++++
+
+Graph: gg
+Clock: 1.76
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 600
++++++
+
+Graph: ggg
+Clock: 2.37
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 600
++++++
+
+Graph: h
+Clock: 3.31
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 800
++++++
+
+Graph: hh
+Clock: 4.1
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 800
++++++
+
+Graph: hhh
+Clock: 5.71
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 800
++++++
+
+Graph: i
+Clock: 4.7
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 900
++++++
+
+Graph: ii
+Clock: 5.83
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 900
++++++
+
+Graph: iii
+Clock: 8.22
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 900
++++++
+
+Graph: j
+Clock: 6.54
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 1000
++++++
+
+Graph: jj
+Clock: 8
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 1000
++++++
+
+Graph: jjj
+Clock: 11.33
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 1000
++++++
+
+Graph: a
+Clock: 0
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 50
++++++
+
+Graph: aa
+Clock: 0
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 50
++++++
+
+Graph: aaa
+Clock: 0
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 50
++++++
+
+Graph: b
+Clock: 0
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 80
++++++
+
+Graph: bb
+Clock: 0.01
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 80
++++++
+
+Graph: bbb
+Clock: 0.01
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 80
++++++
+
+Graph: c
+Clock: 0
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 110
++++++
+
+Graph: cc
+Clock: 0.01
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 110
++++++
+
+Graph: ccc
+Clock: 0.02
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 110
++++++
+
+Graph: d
+Clock: 0.02
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 150
++++++
+
+Graph: dd
+Clock: 0.02
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 150
++++++
+
+Graph: ddd
+Clock: 0.02
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 150
++++++
+
+Graph: e
+Clock: 0.08
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 250
++++++
+
+Graph: ee
+Clock: 0.09
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 250
++++++
+
+Graph: eee
+Clock: 0.07
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 250
++++++
+
+Graph: f
+Clock: 0.42
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 450
++++++
+
+Graph: ff
+Clock: 0.54
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 450
++++++
+
+Graph: fff
+Clock: 0.46
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 450
++++++
+
+Graph: g
+Clock: 1
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 600
++++++
+
+Graph: gg
+Clock: 1.16
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 600
++++++
+
+Graph: ggg
+Clock: 1.01
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 600
++++++
+
+Graph: h
+Clock: 2.38
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 800
++++++
+
+Graph: hh
+Clock: 2.76
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 800
++++++
+
+Graph: hhh
+Clock: 2.47
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 800
++++++
+
+Graph: i
+Clock: 3.34
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 900
++++++
+
+Graph: ii
+Clock: 3.88
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 900
++++++
+
+Graph: iii
+Clock: 3.57
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 900
++++++
+
+Graph: j
+Clock: 4.61
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 1000
++++++
+
+Graph: jj
+Clock: 5.32
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 1000
++++++
+
+Graph: jjj
+Clock: 4.64
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 1000
++++++
+
+Graph: sample_50.txt
+Clock: 2.128643429e-313
+TypeOfGraph: external
+Algorithm used: Dijkstra
+Number of verticies: 10
++++++
+
+Graph: sample_50.txt
+Clock: 0
+TypeOfGraph: external
+Algorithm used: Floyd
+Number of verticies: 10
++++++
+
+Graph: a
+Clock: 4.945799456e-270
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 50
++++++
+
+Graph: aa
+Clock: 4.945810287e-270
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 50
++++++
+
+Graph: aaa
+Clock: 4.945824729e-270
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 50
++++++
+
+Graph: b
+Clock: 0.01
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 80
++++++
+
+Graph: bb
+Clock: 0.01
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 80
++++++
+
+Graph: bbb
+Clock: 0.01
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 80
++++++
+
+Graph: c
+Clock: 0.02
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 110
++++++
+
+Graph: cc
+Clock: 0.01
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 110
++++++
+
+Graph: ccc
+Clock: 0.02
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 110
++++++
+
+Graph: d
+Clock: 0.03
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 150
++++++
+
+Graph: dd
+Clock: 0.03
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 150
++++++
+
+Graph: ddd
+Clock: 0.04
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 150
++++++
+
+Graph: e
+Clock: 0.12
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 250
++++++
+
+Graph: ee
+Clock: 0.15
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 250
++++++
+
+Graph: eee
+Clock: 0.19
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 250
++++++
+
+Graph: f
+Clock: 0.67
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 450
++++++
+
+Graph: ff
+Clock: 0.86
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 450
++++++
+
+Graph: fff
+Clock: 1.07
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 450
++++++
+
+Graph: g
+Clock: 1.57
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 600
++++++
+
+Graph: gg
+Clock: 1.94
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 600
++++++
+
+Graph: ggg
+Clock: 2.64
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 600
++++++
+
+Graph: h
+Clock: 3.7
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 800
++++++
+
+Graph: hh
+Clock: 4.15
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 800
++++++
+
+Graph: hhh
+Clock: 5.74
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 800
++++++
+
+Graph: i
+Clock: 4.77
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 900
++++++
+
+Graph: ii
+Clock: 5.83
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 900
++++++
+
+Graph: iii
+Clock: 8.33
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 900
++++++
+
+Graph: j
+Clock: 6.55
+TypeOfGraph: linear
+Algorithm used: Dijkstra
+Number of verticies: 1000
++++++
+
+Graph: jj
+Clock: 8.07
+TypeOfGraph: reverse
+Algorithm used: Dijkstra
+Number of verticies: 1000
++++++
+
+Graph: jjj
+Clock: 11.42
+TypeOfGraph: random
+Algorithm used: Dijkstra
+Number of verticies: 1000
++++++
+
+Graph: a
+Clock: 0
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 50
++++++
+
+Graph: aa
+Clock: 0
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 50
++++++
+
+Graph: aaa
+Clock: 0
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 50
++++++
+
+Graph: b
+Clock: 0
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 80
++++++
+
+Graph: bb
+Clock: 0
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 80
++++++
+
+Graph: bbb
+Clock: 0
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 80
++++++
+
+Graph: c
+Clock: 0.01
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 110
++++++
+
+Graph: cc
+Clock: 0
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 110
++++++
+
+Graph: ccc
+Clock: 0.01
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 110
++++++
+
+Graph: d
+Clock: 0.02
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 150
++++++
+
+Graph: dd
+Clock: 0.02
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 150
++++++
+
+Graph: ddd
+Clock: 0.02
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 150
++++++
+
+Graph: e
+Clock: 0.07
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 250
++++++
+
+Graph: ee
+Clock: 0.1
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 250
++++++
+
+Graph: eee
+Clock: 0.08
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 250
++++++
+
+Graph: f
+Clock: 0.44
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 450
++++++
+
+Graph: ff
+Clock: 0.55
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 450
++++++
+
+Graph: fff
+Clock: 0.44
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 450
++++++
+
+Graph: g
+Clock: 1.01
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 600
++++++
+
+Graph: gg
+Clock: 1.17
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 600
++++++
+
+Graph: ggg
+Clock: 1.07
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 600
++++++
+
+Graph: h
+Clock: 2.39
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 800
++++++
+
+Graph: hh
+Clock: 2.74
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 800
++++++
+
+Graph: hhh
+Clock: 2.46
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 800
++++++
+
+Graph: i
+Clock: 3.37
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 900
++++++
+
+Graph: ii
+Clock: 4.51
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 900
++++++
+
+Graph: iii
+Clock: 4.06
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 900
++++++
+
+Graph: j
+Clock: 5.03
+TypeOfGraph: linear
+Algorithm used: Floyd
+Number of verticies: 1000
++++++
+
+Graph: jj
+Clock: 5.69
+TypeOfGraph: reverse
+Algorithm used: Floyd
+Number of verticies: 1000
++++++
+
+Graph: jjj
+Clock: 4.92
+TypeOfGraph: random
+Algorithm used: Floyd
+Number of verticies: 1000
++++++
+

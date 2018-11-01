@@ -1,0 +1,7 @@
+a.out
+P2_bu.txt
+P2_file.txt
+P2.txt
+P3_bu.txt
+P3_file.txt
+program1.c
