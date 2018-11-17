@@ -9,19 +9,21 @@
 #include <stdlib.h>
 #include <arpa/inet.h>
 #include <sys/socket.h>
+#include <time.h>
 
 //Definitions
 /*============================================================================*/
 #define SERVER "129.120.151.94" //IP address of server
 #define BUFLEN 512  //Max length of buffer
+#define TIMETOLIVE 3600 //Time to live
 
 //Classes && Structs
 /*============================================================================*/
-struct DHCP_Request {
-  char* yiaddr;
+typedef struct  {
+  char * yiaddr;
   int tid;  //Transaction ID
   int ttl;  //Time to live
-};
+}DHCP_Request;
 
 //Function Declarations && Implementations
 /*============================================================================*/
@@ -31,19 +33,40 @@ void die(char *s)
     exit(1);
 }
 
+int gen_tid()
+{
+  return rand();
+}
+
 
 
 //Main Function
 /*============================================================================*/
 int main(int argc, char *argv[])
 {
+    //use current time as seed for random int generator
+    srand(time(0));
+    //initial values for for client's request structure
+    DHCP_Request test;
+    test.yiaddr="0.0.0.0";
+    test.tid=gen_tid();
+    test.ttl=TIMETOLIVE;
+
     struct sockaddr_in si_other;
     int s, i, slen=sizeof(si_other), portno;
     char buf[BUFLEN];
     char message[BUFLEN];
+    //inet_aton(test.yiaddr, &si_other.sin_addr);
+
 
     system("clear");
     printf("...This is UDP client...\n\n");
+
+    //output initial values
+    printf("Initialized Client Structure:\n");
+    printf("[YIADDR]: %s\n",test.yiaddr);
+    printf("[TID]: %d\n",test.tid);
+    printf("[TTL]: %d\n",test.ttl);
 
     if ( (s=socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) == -1)
     {
@@ -54,6 +77,7 @@ int main(int argc, char *argv[])
     portno = atoi(argv[1]); //The port on which to listen for incoming data
     si_other.sin_family = AF_INET;
     si_other.sin_port = htons(portno);
+    si_other.sin_addr.s_addr = inet_addr("0.0.0.0");
 
     if (inet_aton(SERVER , &si_other.sin_addr) == 0)
     {
@@ -62,8 +86,14 @@ int main(int argc, char *argv[])
     }
 
     // Sending the message to the server
-    printf("Enter client's message : ");
-    gets(message);
+    printf("Sending client's message : ");
+    /*char c = (char)test.tid;
+    strcpy(message,*test.yiaddr);
+    strcat(message,c);*/
+
+    //message = test.yiaddr + " " + test.tid;
+
+    //gets(message);
     if (sendto(s, message, strlen(message) , 0 , (struct sockaddr *) &si_other, slen)==-1)
     {
         die("sendto()");

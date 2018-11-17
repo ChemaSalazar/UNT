@@ -10,6 +10,7 @@
 #include <arpa/inet.h>
 #include <sys/socket.h>
 
+
 //Definitions
 /*============================================================================*/
 #define BUFLEN 512  //Max length of buffer
@@ -19,11 +20,11 @@
 //Classes && Structs
 /*============================================================================*/
 
-struct DHCP_Responce {
-  char* yiaddr;
+typedef struct {
+  char * yiaddr;
   int tid; //Transaction ID
   int ttl; //Time to live
-};
+}DHCP_Responce;
 
 //Function Declarations && Implementations
 /*============================================================================*/
@@ -47,9 +48,10 @@ void m(int x){
       break;
     case 2 :
       printf("[TASK]: DHCP Discovered\n");
+      printf("[EVENT]: Client Is Requesting An IP Address\n");
       break;
     case 3 :
-      printf("[TASK]: DHCP Offer Sent\n");
+      printf("[TASK]: DHCP IP Address Offer Sent\n");
       break;
     case 4 :
       printf("[TASK]: DHCP Request Received\n");
@@ -102,6 +104,8 @@ int main(int argc, char *argv[])
     si_me.sin_family = AF_INET;
     si_me.sin_port = htons(portno);
     si_me.sin_addr.s_addr = htonl(INADDR_ANY);
+
+    si_other.sin_addr.s_addr = inet_addr("0.0.0.0");
 
     //bind socket to port
     if( bind(s , (struct sockaddr*)&si_me, sizeof(si_me) ) == -1)
