@@ -39,11 +39,11 @@ std::string Active_Clients[10][10]={" "};
 std::string code; //responce code from header
 
 
-class DHCP_Responce{
+typedef struct{
   string yiaddr;
   string tid;
   int ttl;
-};
+}DHCP_Responce;
 
 
 //Server side
@@ -110,6 +110,7 @@ int main(int argc, char *argv[])
     int bytesRead, bytesWritten = 0;
     int CLI_count = 0;
     DHCP_Responce This_RES[10];
+    system("clear");
     while(1)
     {
         //receive a message from the client (listen)
@@ -132,11 +133,12 @@ int main(int argc, char *argv[])
         {
             cout << "[CONSOLE]: found '0.0.0.0' => {DISCOVER PHASE}!" << '\n';
             data = IP_List[0];
-            cout << "[CONSOLE]: sending offer: " << IP_List[CLI_count] << endl;
+            cout << "[SERVER]: sending offer: " << IP_List[CLI_count] << endl;
             This_RES[CLI_count].yiaddr = IP_List[CLI_count];
             This_RES[CLI_count].tid = temp.substr(8,temp.length());
             This_RES[CLI_count].ttl = 3600;
             CLI_count++;
+            //bytesWritten += send(newSd, (char*)&msg, strlen(msg), 0);
         }
 
         //CLIENT THAT ACCEPTED PREVIOUS UP OFFER
@@ -148,6 +150,10 @@ int main(int argc, char *argv[])
           This_RES[CLI_count-1].ttl = 3600;
           */
           cout << "[CONSOLE]: CLIENT ACCEPTED OFFER : " << IP_List[CLI_count-1] << endl;
+          cout << "[SERVER]: transaction ID for client : " << This_RES[CLI_count-1].tid << endl;
+          data = "DHCP ACK";
+          cout << "[SERVER]: ACK SENT to CLIENT" << endl;
+          //bytesWritten += send(newSd, (char*)&msg, strlen(msg), 0);
         }
 
         memset(&msg, 0, sizeof(msg)); //clear the buffer
@@ -156,6 +162,7 @@ int main(int argc, char *argv[])
         {
             //send to the client that server has closed the connection
             send(newSd, (char*)&msg, strlen(msg), 0);
+
             break;
         }
 

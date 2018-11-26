@@ -75,12 +75,16 @@ int main(int argc, char *argv[])
 
     this_CLI.yiaddr = "0.0.0.0";
     this_CLI.tid = gen_tid();
+    string data = this_CLI.yiaddr + " " + std::to_string(this_CLI.tid);
+    system("clear");
+    cout << "[CLIENT]: Sending yiaddr = " << this_CLI.yiaddr << " to Server" << endl;
+    cout << "[CLIENT]: Generated transaction ID = " << this_CLI.tid << endl;
 
     //loop communications
     while(1)
     {
 
-        string data = this_CLI.yiaddr + " " + atoi(this_CLI.tid);
+
         memset(&msg, 0, sizeof(msg));//clear the buffer
         strcpy(msg, data.c_str());
         if(data == "exit")
@@ -89,7 +93,7 @@ int main(int argc, char *argv[])
             break;
         }
         bytesWritten += send(clientSd, (char*)&msg, strlen(msg), 0);
-        cout << "Awaiting server response..." << endl;
+
 
 
         //clear the buffer
@@ -107,12 +111,27 @@ int main(int argc, char *argv[])
         //SERVER OFFER
         if(phase == 2)
         {
+          cout << "Awaiting server response..." << endl;
           cout << "[SERVER OFFER]: " << msg << endl;
           this_CLI.yiaddr = msg;
           cout << "[OFFER ACCEPTED]: this client's yiaddr is now : " << this_CLI.yiaddr << endl;
+          this_CLI.tid++;
+          cout << "[CLIENT]: transaction ID is now : " << this_CLI.tid << endl;
+          data = this_CLI.yiaddr + " " +std::to_string(this_CLI.tid);
         }
-        cout << "[Server msg]: " << msg << endl;
+        //SERVER ACK RECEIVED
+        if(phase == 3)
+        {
+          cout << "Awaiting server response..." << endl;
+          cout << "[Server msg]: " << msg << endl;
+          cout << "[CLIENT]: Successfully finished communications with server." << endl;
+          data = "exit";
 
+        }
+
+        //cout << "[Server msg]: " << msg << endl;
+        temp.clear();
+        //data.clear();
     }
     gettimeofday(&end1, NULL);
     close(clientSd);
