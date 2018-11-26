@@ -21,7 +21,7 @@
 /*============================================================================*/
 
 typedef struct {
-  char * yiaddr;
+  char *yiaddr;
   int tid; //Transaction ID
   int ttl; //Time to live
 }DHCP_Responce;
@@ -59,6 +59,8 @@ void m(int x){
     case 5 :
       printf("[TASK]: DHCP Acknowledgement Sent\n");
       break;
+    case 6 :
+      printf("[TESTING]: ");
   }
 }
 
@@ -90,6 +92,8 @@ int main(int argc, char *argv[])
 
     int s, i, slen = sizeof(si_other) , recv_len, portno;
     char buf[BUFLEN], message[1024];
+
+    DHCP_Responce value;
 
     //create a UDP socket
     if ((s=socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) == -1)
@@ -132,6 +136,18 @@ int main(int argc, char *argv[])
         //print details of the client/peer and the data received
         printf("Received packet from %s, port number:%d\n", inet_ntoa(si_other.sin_addr), ntohs(si_other.sin_port));
         printf("Client has sent: %s\n", buf);
+        //print test
+        m(6);
+        /*printf("Client's yiaddr: %s \n",&buf[0]);
+        printf("Client's tid: %s\n",&buf[1]);*/
+        int a;
+        int b;
+        for(a = 0; a < 6; a++)
+        {
+          printf("[%d] %s\n" , a , &buf[a] );
+          strcat(value.yiaddr,&buf[0]);
+        }
+        printf("stored yiaddr: %s\n", value.yiaddr );
 
         //Sending reply to the client
 	bzero(message, 1024);
