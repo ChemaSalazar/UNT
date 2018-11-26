@@ -11,6 +11,7 @@
 #include <sys/socket.h>
 #include <time.h>
 
+
 //Definitions
 /*============================================================================*/
 #define SERVER "129.120.151.94" //IP address of server
@@ -20,7 +21,7 @@
 //Classes && Structs
 /*============================================================================*/
 typedef struct  {
-  char * yiaddr;
+  char *yiaddr;
   int tid;  //Transaction ID
   int ttl;  //Time to live
 }DHCP_Request;
@@ -32,10 +33,10 @@ void die(char *s)
     perror(s);
     exit(1);
 }
-
+//lets generate a random Transaction id!
 int gen_tid()
 {
-  return rand();
+  return rand()%101+100;
 }
 
 
@@ -52,11 +53,11 @@ int main(int argc, char *argv[])
     test.tid=gen_tid();
     test.ttl=TIMETOLIVE;
 
+
     struct sockaddr_in si_other;
     int s, i, slen=sizeof(si_other), portno;
     char buf[BUFLEN];
     char message[BUFLEN];
-    //inet_aton(test.yiaddr, &si_other.sin_addr);
 
 
     system("clear");
@@ -85,29 +86,37 @@ int main(int argc, char *argv[])
         exit(1);
     }
 
-    // Sending the message to the server
-    printf("Sending client's message : ");
-    /*char c = (char)test.tid;
-    strcpy(message,*test.yiaddr);
-    strcat(message,c);*/
-
-    //message = test.yiaddr + " " + test.tid;
-
-    //gets(message);
-    if (sendto(s, message, strlen(message) , 0 , (struct sockaddr *) &si_other, slen)==-1)
+    while(1)
     {
-        die("sendto()");
-    }
+      // Sending the message to the server
+      printf("Sending client's message : ");
 
-    //Receiving reply from server and printing it
-    //clear the buffer by filling null, it might have previously received data
-    bzero(buf, BUFLEN);
-    if (recvfrom(s, buf, BUFLEN, 0, (struct sockaddr *) &si_other, &slen) == -1)
-    {
-       die("recvfrom()");
-    }
-    printf("Server has sent: %s\n", buf);
+      //convert transaction interger to c string.
+      char c_tid[BUFLEN];
+      char *c_tab = " ";
+      //itoa(test.tid,c_tid,10);
+      sprintf(c_tid,"%d", test.tid );
 
+      //Assemble message to send to the server.
+      strcpy(message, test.yiaddr);
+      strcat(message, c_tab);
+      strcat(message, c_tid);
+
+      //gets(message);
+      if (sendto(s, message, strlen(message) , 0 , (struct sockaddr *) &si_other, slen)==-1)
+      {
+          die("sendto()");
+      }
+
+      //Receiving reply from server and printing it
+      //clear the buffer by filling null, it might have previously received data
+      bzero(buf, BUFLEN);
+      if (recvfrom(s, buf, BUFLEN, 0, (struct sockaddr *) &si_other, &slen) == -1)
+      {
+         die("recvfrom()");
+      }
+      printf("Server has sent: %s\n", buf);
+    }
     close(s);
     return 0;
 }
