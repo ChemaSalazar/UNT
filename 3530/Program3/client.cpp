@@ -38,6 +38,7 @@ int gen_tid()
 //Client side
 int main(int argc, char *argv[])
 {
+    srand(time(NULL));
     //we need 2 things: ip address and port number, in that order
     if(argc != 3)
     {
@@ -75,6 +76,7 @@ int main(int argc, char *argv[])
 
     this_CLI.yiaddr = "0.0.0.0";
     this_CLI.tid = gen_tid();
+    this_CLI.ttl = TIMETOLIVE;
     string data = this_CLI.yiaddr + " " + std::to_string(this_CLI.tid);
     system("clear");
     cout << "[CLIENT]: Sending yiaddr = " << this_CLI.yiaddr << " to Server" << endl;
@@ -108,22 +110,34 @@ int main(int argc, char *argv[])
             cout << "Server has quit the session" << endl;
             break;
         }
+
+        if((!strcmp(msg, "ERROR")) ||(!strcmp(msg, "quit")))
+        {
+          cout << "[ERROR]: Server is out of available IP Adresses!" <<endl;
+          cout << "[CLIENT]: Terminating client program!" <<endl;
+          break;
+        }
+
+
         //SERVER OFFER
         if(phase == 2)
         {
           cout << "Awaiting server response..." << endl;
-          cout << "[SERVER OFFER]: " << msg << endl;
+          cout << "[DHCP OFFER]: " << "yiaddr = "<< msg << " transaction ID = " << this_CLI.tid << " with Lifetime of = " << this_CLI.ttl << " secs"<< endl;
+          cout << "[DHCP REQUEST]: requesting " << "yiaddr = "<< msg << " Lifetime of = " << this_CLI.ttl << " secs to Server"<<endl;
           this_CLI.yiaddr = msg;
-          cout << "[OFFER ACCEPTED]: this client's yiaddr is now : " << this_CLI.yiaddr << endl;
+          //cout << "[OFFER ACCEPTED]: this client's yiaddr is now : " << this_CLI.yiaddr << endl;
+          //cout << "[OFFER ACCEPTED] "
           this_CLI.tid++;
-          cout << "[CLIENT]: transaction ID is now : " << this_CLI.tid << endl;
+          //cout << "[CLIENT]: transaction ID is now : " << this_CLI.tid << endl;
           data = this_CLI.yiaddr + " " +std::to_string(this_CLI.tid);
         }
         //SERVER ACK RECEIVED
         if(phase == 3)
         {
           cout << "Awaiting server response..." << endl;
-          cout << "[Server msg]: " << msg << endl;
+          cout << "[DCHP ACK]: " << msg << endl;
+          cout << "[INFO]: This client has yiaddr = "<< msg << " transaction ID = " << this_CLI.tid << " with Lifetime of = " << this_CLI.ttl << " secs"<< endl;
           cout << "[CLIENT]: Successfully finished communications with server." << endl;
           data = "exit";
 
